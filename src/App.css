@@ -1,0 +1,56 @@
+/* Use CSS custom properties for reusable values */
+:root {
+  --primary-bg: #282c34;
+  --primary-text: white;
+  --accent-color: #61dafb;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  /* Add smooth transition for any transform changes */
+  transition: transform 0.3s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    /* Use more performant transform animation */
+    animation: App-logo-spin infinite 20s linear;
+    will-change: transform;
+  }
+}
+
+.App-header {
+  background-color: var(--primary-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Use rem instead of calc for better scaling */
+  font-size: 1.5rem;
+  color: var(--primary-text);
+}
+
+.App-link {
+  color: var(--accent-color);
+  /* Add hover state for better UX */
+  transition: opacity 0.2s ease;
+}
+
+.App-link:hover {
+  opacity: 0.8;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
